@@ -1,0 +1,90 @@
+*
+{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    
+}
+#wrapper
+{
+    height:100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.container
+{
+  height:100%;
+  margin: 0 auto;
+  max-width:1200px;
+  padding: 20px;
+}
+.container h1
+{
+    text-align: center;
+    text-decoration: underline;
+    margin: 20px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: cursive;
+}
+.container:hover h1
+{
+  color:rgb(60, 0, 0);
+  cursor: pointer;
+
+}
+.gallary
+{   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card
+{
+    width: 32%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card img
+{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    object-fit:cover;
+}
+.card:hover
+{
+   transform: scale(1.03);
+   filter:drop-shadow(0 0 10px #333);
+   transition: 0.3s;
+}
+.card:hover img
+{
+    filter: grayscale(0);
+}
+.card figcaption
+{
+    position: absolute;
+    text-decoration: underline;
+    left: 0;
+    bottom:0;
+    margin-left: 10px;
+    padding: 15px;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 1000;
+    color: rgb(19, 19, 19);
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg rgba(0 0 0 0.5),rgba(255,255,255));
+    transition:0.3s;
+}
+.card:hover figcaption
+{
+    opacity: 1;
+    transform: scale(1.03);
+}
